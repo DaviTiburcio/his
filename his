@@ -1,25 +1,42 @@
-#include <dht.h>
-
-#define pinoDHT11 7
-
-dht sensorDHT11;
-
-void setup() {
-  Serial.begin(9600);
-  delay(1000);
-}
-
-void loop() {
-  sensorDHT11.read11(pinoDHT11);
-
-  Serial.print("UMIDADE %: ");
-  Serial.println(sensorDHT11.humidity);
-  Serial.print("TEMPERATURA ºC: ");
-  Serial.println(sensorDHT11.temperature);
-
-  if (sensorDHT11.humidity < 70) {
-    Serial.println("Alerta: Umidade abaixo de 65%");
-  }
-
-  delay(1000);
-}
+"<!DOCTYPE HTML>\r\n"
+"<html lang=\"pt\">\r\n"
+"<head>\r\n"
+"    <meta charset=\"UTF-8\">\r\n"
+"    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n"
+"    <title>ARdD</title>\r\n"
+"    <link rel=\"icon\" href=\"https://files.seeedstudio.com/wiki/xiaoesp32c3-chatgpt/chatgpt-logo.png\" type=\"image/x-icon\">\r\n"
+"    <style>\r\n"
+"        .background-section {\r\n"
+"            position: fixed;\r\n"
+"            top: 0;\r\n"
+"            left: 0;\r\n"
+"            width: 100vw;\r\n"
+"            height: 100vh;\r\n"
+"            z-index: -1;\r\n"
+"        }\r\n"
+"        .background-section video {\r\n"
+"            width: 100%;\r\n"
+"            height: 100%;\r\n"
+"            object-fit: cover;\r\n"
+"            object-position: center;\r\n"
+"        }\r\n"
+"    </style>\r\n"
+"</head>\r\n"
+"<body>\r\n"
+"    <div class=\"background-section\">\r\n"
+"        <video src=\"JOGASO.mp4\" type=\"video/mp4\" autoplay loop muted></video>\r\n"
+"    </div>\r\n"
+"    <img alt=\"SEEED\" src=\"https://files.seeedstudio.com/wiki/xiaoesp32c3-chatgpt/logo.png\" height=\"100\" width=\"410\">\r\n"
+"    <p style=\"text-align:center;\">\r\n"
+"        <img alt=\"ChatGPT\" src=\"https://files.seeedstudio.com/wiki/xiaoesp32c3-chatgpt/chatgpt-logo.png\" height=\"200\" width=\"200\">\r\n"
+"        <h1 align=\"center\">Cloud Printer</h1>\r\n"
+"        <h1 align=\"center\">OpenAI ChatGPT</h1>\r\n"
+"        <div style=\"text-align:center;vertical-align:middle;\">\r\n"
+"            <form action=\"/\" method=\"post\">\r\n"
+"                <input type=\"text\" placeholder=\"Please enter your question\" size=\"35\" name=\"chatgpttext\" required=\"required\"/>\r\n"
+"                <input type=\"submit\" value=\"Submit\" style=\"height:30px; width:80px;\"/>\r\n"
+"            </form>\r\n"
+"        </div>\r\n"
+"    </p>\r\n"
+"</body>\r\n"
+"</html>\r\n"
